@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-24 23:36:16.958949",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "unit",
+  "appointment",
+  "dtos",
+  "amendmentdelete",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unit",
+   "options": "Unit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Appointment",
+   "options": "Appointment"
+  },
+  {
+   "fieldname": "dtos",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "DTOS",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amendmentdelete",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Amendment/Delete"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-25 00:15:15.102919",
+ "modified_by": "Administrator",
+ "module": "Personnel Management",
+ "name": "Posting History",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

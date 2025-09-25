@@ -1,0 +1,242 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "field:p_no",
+ "creation": "2025-09-24 19:43:12.604234",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_information_section",
+  "rank",
+  "doc",
+  "state",
+  "column_break_vppz",
+  "fullname",
+  "seniority",
+  "gpz",
+  "column_break_teeu",
+  "p_no",
+  "promulgation",
+  "section_break_hxhy",
+  "phone_no",
+  "section_break_fsna",
+  "unit",
+  "location",
+  "column_break_ahil",
+  "appointment",
+  "dtos",
+  "career_and_training",
+  "cdt_cse",
+  "corps",
+  "column_break_plql",
+  "toc",
+  "posting_tab",
+  "section_break_dtxr",
+  "posting_history",
+  "section_break_ejjw",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "rank",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Rank",
+   "options": "\nFld Msh\nGen\nLt Gen\nMaj Gen\nBrig Gen\nCol\nLt Col\nMaj\nCapt\nLt\n2Lt",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fullname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fullname",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doc",
+   "fieldtype": "Date",
+   "label": "DOC",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cdt_cse",
+   "fieldtype": "Link",
+   "label": "Cdt Cse",
+   "options": "Cdt Cse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "toc",
+   "fieldtype": "Link",
+   "label": "TOC",
+   "options": "TOC",
+   "reqd": 1
+  },
+  {
+   "default": "DAPR",
+   "fieldname": "corps",
+   "fieldtype": "Data",
+   "label": "Corps",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Unit",
+   "options": "Unit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "label": "Appointment",
+   "options": "Appointment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dtos",
+   "fieldtype": "Date",
+   "label": "DTOS",
+   "reqd": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "label": "State",
+   "options": "\nAbia\nAdamawa\nAkwa Ibom\nAnambra\nBauchi\nBayelsa\nBenue\nBorno\nCross River\nDelta\nEbonyi\nEdo\nFCT\nEkiti\nEnugu\nGombe\nImo\nJigawa\nKaduna\nKano\nKatsina\nKebbi\nKogi\nKwara\nLagos\nNasarawa\nNiger\nOgun\nOndo\nOsun\nOyo\nPlateau\nRivers\nSokoto\nTaraba\nYobe\nZamfara",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gpz",
+   "fieldtype": "Select",
+   "label": "GPZ",
+   "options": "NC\nNE\nNW\nSE\nSS\nSW",
+   "reqd": 1
+  },
+  {
+   "fieldname": "seniority",
+   "fieldtype": "Date",
+   "label": "Seniority",
+   "reqd": 1
+  },
+  {
+   "fieldname": "promulgation",
+   "fieldtype": "Date",
+   "label": "Promulgation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Table",
+   "label": "Phone No",
+   "options": "Phone No"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "p_no",
+   "fieldtype": "Data",
+   "label": "P/No",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "posting_history",
+   "fieldtype": "Table",
+   "label": "Posting History",
+   "options": "Posting History"
+  },
+  {
+   "fieldname": "column_break_vppz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_teeu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dtxr",
+   "fieldtype": "Section Break",
+   "label": "Posting History"
+  },
+  {
+   "fieldname": "section_break_hxhy",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "section_break_ejjw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "personal_information_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Information"
+  },
+  {
+   "fieldname": "career_and_training",
+   "fieldtype": "Section Break",
+   "label": "Career & Training"
+  },
+  {
+   "fieldname": "column_break_plql",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_fsna",
+   "fieldtype": "Section Break",
+   "label": "Current Unit"
+  },
+  {
+   "fieldname": "column_break_ahil",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "posting_tab",
+   "fieldtype": "Tab Break",
+   "label": "Posting"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-25 11:48:28.582881",
+ "modified_by": "Administrator",
+ "module": "Personnel Management",
+ "name": "DAPR Officers",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "p_no",
+ "sort_order": "ASC",
+ "states": [],
+ "title_field": "p_no",
+ "track_changes": 1
+}
