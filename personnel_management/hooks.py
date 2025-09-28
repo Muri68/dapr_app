@@ -10,6 +10,14 @@ app_license = "mit"
 
 # required_apps = []
 
+scheduler_events = {
+    "cron": {
+        "* * * * *": [
+            "personnel_management.personnel_management.doctype.dapr_officers.dapr_officers.update_all_posting_status"
+        ]
+    }
+}
+
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
 # 	{
