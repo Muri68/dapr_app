@@ -4,28 +4,54 @@
 import frappe
 from frappe.model.document import Document
 from frappe.utils import getdate, nowdate
+import re
+
 
 class DAPROfficers(Document):
-    def update_posting_status(self):
-        """Automatically update posting_status based on the last DTOS in Posting History"""
+    def validate(self):
+        """Auto-calculate numeric_p_no and posting_status."""
+        # Generate numeric_p_no (extract digits)
+        if self.p_no:
+            m = re.search(r"\d+", self.p_no)
+            self.numeric_p_no = int(m.group()) if m else 0
+        else:
+            self.numeric_p_no = 0
 
+        # Update posting status
+        self.update_posting_status()
+
+    def update_posting_status(self):
+        """Update posting_status based on last DTOS (with same Unit logic)."""
         if not self.posting_history:
             self.posting_status = "Not Due"
             return
 
-        last_posting = max(
-            self.posting_history,
-            key=lambda x: getdate(x.dtos) if x.dtos else getdate("1900-01-01")
-        )
-
-        if not last_posting.dtos:
+        # Sort posting history by DTOS ascending (oldest first)
+        valid_postings = [p for p in self.posting_history if p.dtos]
+        if not valid_postings:
             self.posting_status = "Not Due"
             return
 
-        last_date = getdate(last_posting.dtos)
-        today = getdate(nowdate())
+        valid_postings.sort(key=lambda x: getdate(x.dtos))
 
-        diff_days = (today - last_date).days
+        # Get the latest posting (most recent)
+        latest = valid_postings[-1]
+        latest_unit = (latest.unit or "").strip().lower()
+
+        # Walk backwards to find oldest posting in same consecutive unit
+        earliest_same_unit = latest
+        for p in reversed(valid_postings[:-1]):
+            unit = (p.unit or "").strip().lower()
+            if unit == latest_unit:
+                earliest_same_unit = p
+            else:
+                # stop once we reach a different unit
+                break
+
+        # Use earliest same-unit DTOS
+        dtos_to_use = getdate(earliest_same_unit.dtos)
+        today = getdate(nowdate())
+        diff_days = (today - dtos_to_use).days
         diff_years = diff_days / 365.25
 
         if diff_years < 2:
@@ -36,9 +62,8 @@ class DAPROfficers(Document):
             self.posting_status = "Overdue"
 
 
-
 def update_all_posting_status():
-    """Update posting_status for all DAPR Officers (scheduler job)"""
+    """Scheduler job to update posting_status for all DAPR Officers."""
     officers = frappe.get_all("DAPR Officers", pluck="name")
     updated = 0
 
