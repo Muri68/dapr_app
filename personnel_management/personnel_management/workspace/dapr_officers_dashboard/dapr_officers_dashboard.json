@@ -1,0 +1,93 @@
+{
+ "charts": [
+  {
+   "chart_name": "Officers by Rank",
+   "label": "Officers by Rank"
+  },
+  {
+   "chart_name": "Officers by Commission",
+   "label": "Officers by Commission"
+  }
+ ],
+ "content": "[{\"id\":\"0Co-GjryqO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">DAPR OFFICERS DASHBOARD</span>\",\"col\":12}},{\"id\":\"cSruTsVI7H\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Officers by Rank\",\"col\":6}},{\"id\":\"cekqYdvxiI\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Officers by Commission\",\"col\":6}},{\"id\":\"oDRff5SS_w\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Officers\",\"col\":4}},{\"id\":\"9P7fTjKorX\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Female Officers\",\"col\":4}},{\"id\":\"l2KOCNOfoX\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Male Officers\",\"col\":4}},{\"id\":\"vjGtNKHw60\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"u65UyKAHTe\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters & Reports\",\"col\":4}}]",
+ "creation": "2025-09-25 10:23:54.832028",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "share-people",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "DAPR OFFICERS DASHBOARD",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Masters & Reports",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "DAPR Officers",
+   "link_count": 0,
+   "link_to": "DAPR Officers",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Officer by Rank",
+   "link_count": 0,
+   "link_to": "Offices by Rank",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "DAPR Officers",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Officers by Commision",
+   "link_count": 0,
+   "link_to": "Officers by Type of Commision",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "DAPR Officers",
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-10-07 17:49:57.785290",
+ "modified_by": "Administrator",
+ "module": "Personnel Management",
+ "name": "DAPR OFFICERS DASHBOARD",
+ "number_cards": [
+  {
+   "label": "Total Officers",
+   "number_card_name": "Total Officers"
+  },
+  {
+   "label": "Female Officers",
+   "number_card_name": "Female Officers"
+  },
+  {
+   "label": "Male Officers",
+   "number_card_name": "Male Officers"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [],
+ "title": "DAPR OFFICERS DASHBOARD"
+}
